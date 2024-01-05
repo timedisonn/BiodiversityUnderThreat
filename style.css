@@ -1,0 +1,299 @@
+body {
+
+  /* animation for the background of the website, idea provided from usability testing,
+  troubleshooting and implementation through copilot and stackoverflow */
+    animation: gradientAnimation 10s infinite;
+    color: white;
+  }
+
+  @keyframes gradientAnimation {
+    0% { background: #3c523f; }
+    50% { background: #273629; }
+    100% { background: #355439; }
+  }
+  
+/* Making all font colour white */
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+  
+  p {
+    color: white;
+  }
+  
+
+/* first part of the website, the welcome screen to introduce the readers. theres an image of a koala
+and a backdrop, accompanied with a paragraph and a title */
+  #welcome-section {
+    position: relative;
+    height: 100vh;
+    background-image: url(images/koala.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .welcome-content h2 {
+    font-size: 48px; /* Adjust the font size as desired */
+  }
+  
+  .welcome-content p {
+    font-size: 24px; /* Adjust the font size as desired */
+  }
+  
+  #welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif; /* Add the font family declaration */
+
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3c523f;
+    color: #fff;
+    padding: 20px;
+    z-index: 999; /* Ensure the header appears above other content */
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .part {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #paragraph-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .green-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #line-chart,
+  #bar-chart {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+  }
+  
+  #third-part {
+    display: flex;
+    margin: 2rem 0;
+  }
+  
+  .left-side {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .right-side {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  #carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #carousel img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0.5rem;
+  }
+
+  #fifth-part {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left-side, .right-side {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .right-side {
+    background-color: #fff;
+  }
+  #sixth-part {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sixth-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+  }
+  
+  .sixth-right {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .seventh-part {
+    display: flex;
+  }
+  
+  .seven-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .seven-right {
+    flex: 0 0 50%
+  }
+  
+  .section-eight {
+    position: relative;
+  }
+  
+  .eight-img-backdrop {
+    position: relative;
+    width: 100%;
+  }
+  
+  .eight-img-backdrop img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .eight-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+  }
+  .ninth-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .ninth-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .ninth-right {
+    flex: 1;
+  }
+  
+  #ninthPie,
+  #ninthBar {
+    width: 100%;
+    height: 400px;
+  }
+  
+#ninthCarousel .carousel-control-prev,
+#ninthCarousel .carousel-control-next {
+  color: #000; /* Set the color to black */
+}
+.eight-img-backdrop {
+    position: relative;
+  }
+  
+  .gif-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .eight-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark backdrop */
+    padding: 20px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3c523f;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .button:hover {
+    background-color: #638460;
+  }

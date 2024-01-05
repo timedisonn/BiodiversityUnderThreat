@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<!-- This is the HTML part of my code. I did a lot of the writing using what i've previously learnt,
+and I incorporate some research materials from stackoverflow, gpt 3.5, and GitHub Copilot, especially
+around flexbox, since admittedly, I was a little bit lost. And then i also used some-->
+<!-- using bootstrap plotly library -->
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <h1>BIODIVERSITY UNDER THREAT.</h1>
+        <h6>a data visualisation project.</h6>
+    </header>
+    <!-- this section is to solve the issue of the page loading to a different section instead of the top of the page
+        using css. it was one of the feedbacks i received in the usability testing, and this solution was provided
+        through troubleshooting with ChatGPT 3.5. -->,
+    <a id="top"></a>
+    <!-- welcome title screen -->
+    <section id="welcome-section">
+        <div class="welcome-content">
+            <h1>Living on Borrowed Time</h1>
+            <h3>The Australian biodiversity is under constant threat of collapse. Since the introduction of non-native
+                species in the local environment, Australia's local populations have had to compete with these new
+                species. Putting invasive species aside, The Australian biodiversity has faced challenges with changing
+                landscape and nature. They have to adapt and change, but these changes have decimated their ability to
+                survive in the long run.</h3>
+            <br></br>
+            <p>Scroll to continue.</p>
+        </div>
+    </section>
+    <!-- i used a container for this section, but later on i figured out that it is simpler to style
+    the css by each div class instead. but anyways, all sections follow the same theme, -->
+    <div class="container">
+        <div id="first-part" class="part">
+            <div class="left-side">
+                <div id="paragraph-container">
+                    <h2>State of Australian Biodiversity</h2>
+                    <p>Australia has one of the world's highest rates of native species extinction in the world.
+                        The volatile balance of the Australian nature, which prior to the colonisation by Europeans
+                        in the late 1700s was largely left intact and free from outside influence. This environment
+                        is susceptible towards the smallest of changes in nature. The Australian government, through
+                        relevant legislation such as the Environment Protection and Biodiversity Conservation (EPBC),
+                        has listed over 100 extinct species, 10 of which were added within the last 2 years alone,
+                        and the number of threatened animal species is continuing to rise.</p>
+                </div>
+                <div id="button-container">
+                    <a href="https://www.dcceew.gov.au/environment/biodiversity/threatened" target="_blank"
+                        class="green-button">Go to the Australian Government for more resources</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div id="line-chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title-container">
+            <h2 class="text-center">Meet some Australian Animals in Danger of Extinction</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div id="fourth-part" class="part">
+            <!-- carousel using bootstrap -->
+            <div class="carousel-container">
+                <div id="animal-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/numbat.jpg" class="d-block w-100" alt="Animal 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>This is the Numbat. Numbat is currently known to exist in the woodlands of
+                                        Western Australia. They prefer areas with dense vegetation, and since they are
+                                        also known as
+                                        anteaters, they have an appetite for termites. Numbats are on the verge of
+                                        extinction due to
+                                        habitat loss, predation by invasive species, and other threats. Their population
+                                        is limited to
+                                        several isolated areas, and they might not exist in the next few decades.
+                                    </p>
+                                    <a href="https://www.iucnredlist.org/species/14222/21949380" target="_blank"
+                                        class="green-button">Read more about Numbats</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/finch.jpg" class="d-block w-100" alt="Animal 2">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Gouldian Finch is a small bird that has many different colours of feathers.
+                                        However, because of their pretty colours, they were once the target of poachers
+                                        and the likes. As such, their population has declined significantly, and their
+                                        survival is
+                                        under threat, due to habitat changes through forest fires and the likes. </p>
+                                    <a href="https://www.iucnredlist.org/species/22719744/211561819" target="_blank"
+                                        class="green-button">Read more about Gouldian Finches</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="images/koala2.jpg" class="d-block w-100" alt="Animal 10">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Koalas are one of the worlds most notable marsupials that can only be found in
+                                        Australia. They are often thought to be bears, but they are actually not. Their
+                                        diet primarily consists of eucalyptus tree leaves, and as such, they dwell on
+                                        these trees most of the time. They are known to be sedentary, and they spend
+                                        most of their time sleeping, moving only when it is necessary. Koalas are under
+                                        the threat of extinction, due to habitat loss and climate change. Deforestation
+                                        has affected their limited spread, and when combined with a lot of different
+                                        climactic factors, their survival in the coming decades are under the watchful
+                                        eyes of conservationists.</p>
+                                    <a href="https://www.iucnredlist.org/species/16892/166496779" target="_blank"
+                                        class="green-button">Read more about Koalas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#animal-carousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#animal-carousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sixth-part">
+        <div class="sixth-left">
+            <h2>What are the threats?</h2>
+            <p>Threats to the Australian biodiversity comes in many different kinds, but according to a recent report,
+                the top 3 threats to the Australian biodiversity are Invasive Species, Ecosystem Modifications, and
+                agricultural activities. When compared to the world, the top 3 threats are Agriculture,
+                Overexploitation, and Urban development. The top 2 threats to Australia are significantly larger in
+                portion when compared with worldwide trends, as shown in the chart.</p>
+        </div>
+        <div class="sixth-right">
+            <div id="grouped-bar-chart"></div>
+        </div>
+    </div>
+    <div class="container"></div>
+    <div id="second-part" class="part">
+        <div class="left-side">
+            <div id="paragraph-container">
+                <H1>Invasive Species</H1>
+                <p> First, lets cover introduced organisms. Its a massive problem in Australia, as lot of these
+                    introduced species has no natural predators. Their numbers grow exponentially, as combined with
+                    favourable conditions, they decimate local resources, competing with the local flora and fauna. Take
+                    for example, One of the largest threats to the Australian biodiversity is the European Feral Rabbit.
+                    As shown in the chart, The Rabbit is responsible for threatening around more than 300 native
+                    Australian
+                    species, both directly and indirectly, which adds up as that is more than the second and third most
+                    threatening species combined.</p>
+            </div>
+            <div id="button-container">
+                <a href="https://www.dcceew.gov.au/environment/invasive-species" target="_blank"
+                    class="green-button">Resources about Invasive species</a>
+            </div>
+        </div>
+        <!-- users can manipulate this part using checkboxes -->
+        <div class="right-side">
+            <div id="bar-chart"></div>
+            <div id="toggleOptions" style="color: black;">
+                <label for="toggleBar1">
+                    <input type="checkbox" id="toggleBar1" value="Cats" checked>
+                    <span>Cats</span>
+                </label>
+                <label for="toggleBar2">
+                    <input type="checkbox" id="toggleBar2" value="Pigs" checked>
+                    <span>Pigs</span>
+                </label>
+                <label for="toggleBar3">
+                    <input type="checkbox" id="toggleBar3" value="Rabbits" checked>
+                    <span>Rabbits</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="third-part">
+        <div class="left-side">
+            <div class="paragraph-container">
+                <h2>Rabbits?</h2>
+                <p>Rabbits were introduced to Australia in the middle of the 19th century for hunting, but not long
+                    after they went loose their population exploded, as they have no natural predators, and the
+                    Australian environment suits their breeding patterns as a whole. Rabbits are invasive in many
+                    different ways, for instance, they overgraze lands, which leads to lack of food supply in the area,
+                    and soil erosion that changes the whole landscape. Take Phillip Island as an example, Phillip island
+                    was once a home to a large rabbit population, but once they were eradicated, we can see that the
+                    island is in a much better shape than it was before. These are some of the harsh realities that the
+                    native Australian fauna is facing. There have been previous attempts of population control, but in
+                    reality as shown through the graph (Cooke et al, 2013), the rabbit population will always recover.
+                    It's a race against time, and we only have finite resources.</p>
+            </div>
+            <div class="button-container">
+                <a href="https://www.dcceew.gov.au/sites/default/files/documents/rabbit.pdf" target="_blank"
+                    class="green-button">More about Feral Rabbits</a>
+            </div>
+        </div>
+        <div class="right-side">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/bfrrbt.png" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/afterrbt.png" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/rabbitbio.png" class="d-block w-100" alt="Image 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="fifth-part" class="part">
+        <div class="left-side">
+            <h2>Changing Landscape</h2>
+            <p>Invasive species are one part of the problem. Another one is a changing landscape. Lets take one of the
+                recent disasters in Australian History. the 2019-2020 Bushfires were one of the worst ecological
+                disaster events in Australia's history. The fires burned an estimated $5 billion dollars, around
+                8% of Australia's agricultural GDP. But not only that, a lot of different species were effected.
+                Take the koalas for example. after the fires, The Australian government listed Koalas as being
+                Endangered. Koalas primarily live on the East coast of Australia. As shown in the chart, the fires
+                burned a lot of its habitat, resulting in its population decline.
+            </p>
+        </div>
+        <div class="right-side">
+            <div id="bubble-map"></div>
+        </div>
+    </div>
+    <div class="seventh-part">
+        <div class="seven-left">
+            <h2>Forest Cover?</h2>
+            <p>Not only bushfires, but there has been a massive deforestation in Australia since the advent of European
+                colonisation. since 1750's, Australia has lost a significant portion of its forests, as shown through
+                the chart. In all different types of forests, there has been a significant reduction of tree population.
+                These deforestation events are caused by a variety of causes. But in general..</p>
+            <p>Scroll to continue</p>
+        </div>
+        <div class="seven-right">
+            <div id="stacked-bar-chart"></div>
+        </div>
+    </div>
+    <section class="section-eight">
+        <div class="eight-img-backdrop">
+            <img src="images/human.gif" alt="human gif">
+        </div>
+        <div class="eight-overlay">
+            <h1>Humans. It's Humans.</h1>
+            <p>Since the colonisation of Australia, Humans are responsible for all of these changes.
+                We have introduced invasive species, we have changed the landscape, and we have deforested
+                the land. We are the ones responsible for the current state of the Australian environment,
+                and for that reason, we should do our best to change the course!
+            </p>
+        </div>
+    </section>
+    <div class="ninth-part">
+        <div class="ninth-left">
+            <h2>We're still destroying nature!</h2>
+            <p>Take for example, as of now, the Australian government has committed to net zero emissions by 2050.
+                However, we're still far from targets. According to the statistics, We are only going to reach about
+                85% of net 0 targets, which is still insufficient, and adding salt to the wound, we are still having
+                new coal, gas, and other non renewable resources projects ongoing, and as shown in the chart, Coal
+                project marks a significant amount of new projects</p>
+            <p>Scroll on the slides to see different charts</p>
+        </div>
+        <div id="ninth-right" class="col-sm-6">
+            <div id="ninthCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="ninthPie"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="ninthBar"></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#ninthCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#ninthCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section-ten">
+        <div class="eight-img-backdrop">
+            <img src="images/whattodo.gif" alt="Background Image" class="gif-image">
+            <div class="eight-overlay">
+                <h2>So how can you help?</h2>
+                <p>The future seems bleak. That is undeniable. But when more and more people bind together not as
+                    individuals, but as a team, changes are possible. We can donate to charitable sources, like the
+                    Australian World Wildlife Fund, or we can volunteer to help conserve local flora and fauna. We can
+                    also contact our local representatives, to make sure that they are aware of our concerns, and so
+                    that they could call for actions that represent our values better.</p>
+                <p>Lets do more for Australia and protect our Biodiversity!</p>
+                <div class="button-container">
+                    <a class="button" href="https://wwf.org.au" target="_blank" class="green-button">Go to WWF</a>
+                    <a class="button"
+                        href="https://www.aph.gov.au/Senators_and_Members/Guidelines_for_Contacting_Senators_and_Members"
+                        target="_blank" class="green-button">Find your representatives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #3c523f; color: white; padding: 20px;">
+        <div class="container">
+            <p>TEDI0478 DECO3100 Information Visualisation Design Studio <a href="https://docs.google.com/document/d/1VwxPwxNuHoyhJnqWvWMdSwDU5qrMaqVVI4Cw-nHS2TM/edit?usp=sharing">Documentation + References</a></p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- Fin! -->
